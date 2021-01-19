@@ -69,6 +69,14 @@
           </div>
         </div>
       </div>
+      <div class="d-flex justify-content-center">
+          <div class="btn-group" role="group" aria-label="Weather switcher">
+              <button type="button" class="btn btn-outline-primary" data-weather="autumn">Autumns</button>
+              <button type="button" class="btn btn-outline-primary" data-weather="spring">Spring</button>
+              <button type="button" class="btn btn-outline-primary" data-weather="summer">Summer</button>
+          </div>
+      </div>
+      
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -118,6 +126,7 @@
       window.addEventListener('load', function() {
         console.log('load');
         listenToSpeedRangeChange(onRangeValueChange);
+        listenOnWeatherBtnClick();
       });
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -128,6 +137,34 @@
       window.addEventListener('beforeunload', function() {
         console.log('before unload')
       })
+
+      const getFlowerCallback = function(response) {
+        const dataText = response.body;
+        const data = JSON.parse(dataText);
+        console.log(data);
+      }
+
+      function listenOnWeatherBtnClick() {
+        document.addEventListener('click', function(event) {
+          const selectedWeather = event.target.getAttribute('data-weather');
+            const getFlowerCallbackV5 = function(response) {
+                const dataText = response.body;
+                const data = JSON.parse(dataText);
+                const carouselItems = Array.from(document.querySelectorAll('.carousel-item > img'));
+                const weathers = api.getImageByWeather(selectedWeather, data);
+                carouselItems.forEach(function(item, index) {
+                    console.log({index, weather: weathers[index], item});
+                    item.setAttribute('src', weathers[index].src);
+                    item.setAttribute('alt', weathers[index].alt);
+                });
+            }
+          api.getFlowers(getFlowerCallbackV5); 
+        });
+      }
+
+      
+      
+    
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
