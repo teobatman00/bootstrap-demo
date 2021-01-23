@@ -47,35 +47,86 @@
     </div>
 </nav>
 
-<div id="flower-carousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="1000">
-            <img
-                    src="https://images.wallpaperscraft.com/image/hydrangea_flower_autumn_dry_113504_800x600.jpg"
-                    class="d-block w-100"
-                    alt="Hydragea flower autumn">
+<!-- 
+    div.container -> tab
+    div.row -> tab
+    div.col*3 -> tab 
+-->
+
+<div class="container">
+    <div class="row">
+        <!-- SIDE BAR -->
+        <div class="col-sm-2">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
         </div>
-        <div class="carousel-item" data-bs-interval="1000">
-            <img
-                    src="https://cdn.wallpapersafari.com/39/92/KY6AlV.jpg"
-                    class="d-block w-100"
-                    alt="Above the sky">
+        <div class="col-sm-8">
+            <!-- CAROUSEL START -->
+            <div id="flower-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1000">
+                        <img
+                                src="https://images.wallpaperscraft.com/image/hydrangea_flower_autumn_dry_113504_800x600.jpg"
+                                class="d-block w-100"
+                                alt="Hydragea flower autumn">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1000">
+                        <img
+                                src="https://cdn.wallpapersafari.com/39/92/KY6AlV.jpg"
+                                class="d-block w-100"
+                                alt="Above the sky">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1000">
+                        <img
+                                src="https://a-static.besthdwallpaper.com/blue-asters-autumn-flower-wallpaper-800x600-53874_17.jpg"
+                                class="d-block w-100"
+                                alt="Blue Asters">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="btn-group" role="group" aria-label="Weather switcher">
+                    <button type="button" class="btn btn-outline-primary" data-weather="autumn">Autumns</button>
+                    <button type="button" class="btn btn-outline-primary" data-weather="spring">Spring</button>
+                    <button type="button" class="btn btn-outline-primary" data-weather="summer">Summer</button>
+                </div>
+            </div>
+            <!-- CAROUSEL END -->
+            <article>
+                <h1>Flower Gallery</h1>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget est neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ultrices felis sed porta cursus. Mauris blandit porta egestas. Etiam interdum, ipsum eu ullamcorper ultrices, mauris odio iaculis libero, in fermentum velit risus vel nisl. Nunc vitae nisl porttitor, gravida mi nec, convallis turpis. Sed id dolor justo. Sed nec risus volutpat, rhoncus justo ac, commodo libero. Quisque consequat massa non sapien hendrerit volutpat. Praesent at arcu malesuada, convallis metus vitae, pharetra magna.
+
+                        Aliquam in nunc lectus. Nulla rhoncus neque lobortis, sodales urna facilisis, imperdiet nisi. Sed blandit euismod ipsum. Suspendisse imperdiet nibh et purus molestie efficitur. Aliquam erat volutpat. Cras eget metus nec orci tincidunt iaculis. Morbi consectetur maximus urna ac dignissim. Pellentesque efficitur leo risus, at finibus tellus consectetur sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus vel tortor eros. Nulla aliquet placerat nisi sodales efficitur. Donec non maximus velit. Nam tristique vel neque quis posuere.
+                        
+                        Proin finibus lobortis lacus a placerat. Donec eget congue nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis pellentesque sodales nibh ut semper. Aliquam dictum euismod erat ut porttitor. Vestibulum cursus risus et justo auctor vestibulum. Phasellus a turpis ac massa congue aliquam. Nulla vestibulum quis enim quis lacinia.
+                </p>
+            </article>
         </div>
-        <div class="carousel-item" data-bs-interval="1000">
-            <img
-                    src="https://a-static.besthdwallpaper.com/blue-asters-autumn-flower-wallpaper-800x600-53874_17.jpg"
-                    class="d-block w-100"
-                    alt="Blue Asters">
+        <!-- ADS ONLY SHOW ON MOBILE -->
+        <div class="col-sm fixed-bottom bg-info d-block d-sm-none">
+            Ads here
+        </div>
+        <!-- ADS SHOW ON OTHER DEVICES -->
+        <div class="col-sm-2 bg-info d-none d-sm-block">
+            Ads here
         </div>
     </div>
 </div>
-<div class="d-flex justify-content-center">
-    <div class="btn-group" role="group" aria-label="Weather switcher">
-        <button type="button" class="btn btn-outline-primary" data-weather="autumn">Autumns</button>
-        <button type="button" class="btn btn-outline-primary" data-weather="spring">Spring</button>
-        <button type="button" class="btn btn-outline-primary" data-weather="summer">Summer</button>
-    </div>
-</div>
+
+
 
 
 <!-- Optional JavaScript; choose one of the two! -->
