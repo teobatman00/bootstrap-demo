@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Flower Gallery</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Flower Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+
+                <label for="speed-range" class="form-label">Speed (s)</label>
+                <input type="range" class="form-range" min="1" max="5" step="0.5" id="speed-range">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- SIDE BAR -->
+            <div class="col-sm-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- CONTENT-->
+            <div class="col-sm-10">
+                <form class="container" id="auth-form">
+                    <h1>Welcome to Github</h1>
+                    <div class="mb-3">
+                        <input id="auth-token" class="form-control" type="text" placeholder="Put your token here"/>
+                        <div class="form-text text-danger invisible" id="auth-error">-</div>
+                    </div>
+                    <button class="btn btn-primary" id="auth-btn">Authentication</button>
+                </form>
+                <!-- TODO: make this container not visible when not login yet -->
+                <!-- TODO: make this container visible on desktop only-->
+                <div class="container" id="github-guide">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>API</th>
+                                <th>URL</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Feeds Url</td>
+                                <td>
+                                    <input class="form-control" type="text" id="github-feeds-url" />
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary"
+                                            disabled
+                                    >
+                                        Try it out
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>User URL</td>
+                                <td>
+                                    <input class="form-control" type="text" id="github-user-url" />
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary">
+                                        Try it out
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>User repositories Url</td>
+                                <td>
+                                    <input class="form-control" type="text" id="github-repositories-url" />
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary"
+                                            disabled
+                                    >
+                                        Try it out
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- TODO: make this container visible on mobile only -->
+                <div class="container" id="card-github-guide">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Feeds Url
+                            </h5>
+                            <h6 class="car-subtitle mb-2 text-muted">
+                                <input class="form-control" type="text" id="card-github-feeds-url"/>
+                            </h6>
+                            <button class="btn btn-outline-primary">Try it out</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                User Url
+                            </h5>
+                            <h6 class="car-subtitle mb-2 text-muted">
+                                <input type="text" class="form-control" id="card-github-user-url"/>
+                            </h6>
+                            <button class="btn btn-outline-primary">Try it out</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                User repositories Url
+                            </h5>
+                            <h6 class="car-subtitle mb-2 text-muted">
+                                <input type="text" class="form-control" id="card-github-repositories-url" />
+                            </h6>
+                            <button class="btn btn-outline-primary" disabled>Try it out</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mb-3 mt-3 bg-light overflow-scroll" style="max-height: 300px">
+                    <code id="github-response-preview">
+                        Hello, World!
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="./github-api.js"></script>
+
+    <script>
+        let authToken;
+        function hideAuthForm() {
+            const authForm = document.getElementById('auth-form');
+            const authFormClasses = authForm.getAttribute('class');
+            const hideClasses = `${authFormClasses} d-none`;
+            console.log({authFormClasses, hideClasses});
+            authForm.setAttribute('class', hideClasses);
+        }
+
+        function showErrorMessage(message) {
+            const errMessageText = document.getElementById('auth-error');
+            errMessageText.textContent = message;
+            errMessageText.setAttribute('class', 'form-text text-danger');
+        }
+
+        function hideErrorMessage() {
+            const errMessageText = document.getElementById('auth-error');
+            errMessageText.setAttribute('class', 'form-text text-danger d-none');
+        }
+
+        function showGuideCard() {
+            const guideCardContainer = document.getElementById('card-github-guide');
+            guideCardContainer.setAttribute('class', 'container d-block d-sm-none')
+        }
+
+        function showGuideTable() {
+            const guideContainer = document.getElementById('github-guide');
+            guideContainer.setAttribute('class', 'container d-none d-sm-block')
+        }
+
+        function setUrlTable({feedsUrl, repositoriesUrl, userUrl}) {
+            document.getElementById('github-feeds-url').value = feedsUrl;
+            document.getElementById('github-user-url').value = userUrl;
+            document.getElementById('github-repositories-url').value = repositoriesUrl;
+        }
+
+        function setUrlCard({feedsUrl, repositoriesUrl, userUrl}) {
+            document.getElementById('card-github-feeds-url').value = feedsUrl;
+            document.getElementById('card-github-user-url').value = userUrl;
+            document.getElementById('card-github-repositories-url').value = repositoriesUrl;
+        }
+
+        function setGithubResponsePreview(message) {
+            document.getElementById('github-response-preview').innerText = message;
+        }
+
+        function onAuthBtnClick (e) {
+            e.preventDefault();
+            const authTokenVal = document.getElementById('auth-token').value;
+            authToken = authTokenVal;
+            const githubAPI = new GithubAPI(authTokenVal);
+            githubAPI.authentication().then(res => {
+                console.log('Authentication res: ', res);
+                // need to control visual of the elements over here
+                setUrlTable({
+                    feedsUrl: res['feeds_url'],
+                    repositoriesUrl: res['current_user_repositories_url'],
+                    userUrl: res['user_url']
+                });
+
+                setUrlCard({
+                    feedsUrl: res['feeds_url'],
+                    repositoriesUrl: res['current_user_repositories_url'],
+                    userUrl: res['user_url']
+                })
+            }).catch(err => {
+                console.log('Authentication failed');
+                console.error(err.message);
+                showErrorMessage(err.message);
+            })
+        }
+
+        function onTryBtnClick(id) {
+            const githubAPI = new GithubAPI(authToken);
+            const targetUrl = document.getElementById(id).value;
+            githubAPI.requestUrl(targetUrl).then(res => {
+                console.log('API res: ', res)
+                // TODO: need to apply data to the #github-response-preview
+            })
+        }
+
+        window.onload = function() {
+            const authBtn = document.getElementById('auth-btn');
+            authBtn.onclick = onAuthBtnClick;
+        }
+
+    </script>
+
+</body>
+</html>
